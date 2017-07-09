@@ -3,9 +3,21 @@ function JSXR_Req_Func( arguments_object ){
   if( arguments_object ){
     if( arguments_object.resource && arguments_object.resource !== null && typeof arguments_object.resource === 'object' ){
       if( arguments_object.resource.protocol ){
-        if ( typeof arguments_object.resource.protocol === "string || arguments_object.resource.protocol instanceof String ) ){
-        
+        if ( typeof arguments_object.resource.protocol === "string" || arguments_object.resource.protocol instanceof String ) ){
+          if ( arguments_object.resource.protocol === "either" ){
+            URI_array[] = { 
+              "name" : "protocol",
+              "values" : [ "http://", "https://" ],
+              "default" : "https://"
+            }
+          }else{
+          
+          }
+        }else{
+          console.log( "Warning: 'protocol' property of 'resource' provided to the JSXR_Req_Func must be a string" );
         }
+      }else{
+      
       }
     }
     if( arguments_object.query && arguments_object.query !== null && typeof arguments_object.query === 'object' ){
