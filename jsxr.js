@@ -1,6 +1,16 @@
-var ghp_get = function( owner, repo, callback, modifier )
-{
-  function generate_query( modifier ){
+function JSXR_Req_Func( settings ){
+  
+}
+
+
+var REST_request = function( domain, resource, callback, options ){
+  var request = domain + "/" + resource,
+      query = {
+        "object" : {},
+        "string" : ""
+      }
+  if
+  function generate_query( options ){
     
     var result = "", result_length = 0, options;
     if( arguments.length > 0 ){
@@ -42,7 +52,7 @@ var ghp_get = function( owner, repo, callback, modifier )
     }
     
     return result;
-  } 
+  }
   
   var HTTP_req = new XMLHttpRequest();
   HTTP_req.onreadystatechange = function() {
@@ -52,6 +62,10 @@ var ghp_get = function( owner, repo, callback, modifier )
   };
   HTTP_req.open( "GET", "https://api.github.com/repos/" + owner + "/" + repo + "/issues" + generate_query( modifier ), true );
   HTTP_req.send();
+}
+
+var ghp_get = function( owner, repo, callback, modifier )
+{
 }
 
 ghp_get.options = {
