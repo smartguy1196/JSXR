@@ -1,5 +1,21 @@
-function JSXR_Req_Func( settings ){
+function JSXR_Req_Func( arguments_object ){
+  var URI_array;
+  if( arguments_object ){
+    if( arguments_object.resource && arguments_object.resource !== null && typeof arguments_object.resource === 'object' ){
+      if( arguments_object.resource.protocol ){
+        if ( typeof arguments_object.resource.protocol === "string || arguments_object.resource.protocol instanceof String ) ){
+        
+        }
+      }
+    }
+    if( arguments_object.query && arguments_object.query !== null && typeof arguments_object.query === 'object' ){
+    
+    }
+  }
+  else
+  {
   
+  }
 }
 
 
